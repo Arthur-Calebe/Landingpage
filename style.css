@@ -107,6 +107,22 @@ header{
     margin-bottom: 8px;
 }
 
+.caixa-wpp{
+    background-color: #f0efef;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+}
+
+.caixa-insta{
+    background-color: #f0efef;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+}
+
 footer{
     background-color: #f0efef;
     text-align: center;
@@ -114,11 +130,20 @@ footer{
     padding-bottom: 10px;
 }
 
+.caixa-insta:hover, .caixa-wpp:hover{
+    background-color: #e4e4e4;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
 .btn:hover{
     background-color: #353535;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
 .Links a:hover{
     color: #353535;
 }
 
+.img-home:hover{
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
