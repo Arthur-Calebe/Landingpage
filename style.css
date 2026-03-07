@@ -23,9 +23,11 @@ header{
     text-decoration: none;
     color: #a1a1a1;
     font-weight: bold;
+    font-size: 19px;
 }
 
 #home{
+    font-size: 20px;
     color: #353535;
     justify-content: space-between;
     background-color: #f0efef;
@@ -34,7 +36,7 @@ header{
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 200px;
     min-height: 85vh;
 
     padding: 0 80px;
@@ -58,9 +60,17 @@ header{
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
     gap: 80px;
     padding: 100px 80px;
     min-height: 85vh;
+}
+
+#sobre p {
+    max-width: 800px;
+    margin: 0 auto;   /* centraliza o bloco */
+    text-align: center;
+    margin-top: 70px;
 }
 
 #servicos{
@@ -80,12 +90,20 @@ header{
     justify-content: space-between;
     background-color: #fcfcfc;
     padding-top: 5px;
+    margin-top: 40px;
     text-align: center;
     justify-content: center;
     align-items: center;
     gap: 80px;
     padding: 100px 80px;
     min-height: 85vh;
+}
+
+#contato p{
+    max-width: 800px;
+    margin: 0 auto;   /* centraliza o bloco */
+    text-align: center;
+    margin-top: 70px;
 }
 
 .redes{
@@ -107,20 +125,31 @@ header{
     margin-bottom: 8px;
 }
 
-.caixa-wpp{
-    background-color: #f0efef;
+.caixa-wpp, .caixa-insta, .caixa-linkedin, .caixa-github {
+    background-color: white;
     padding: 20px;
-    border-radius: 10px;
+    width: 150px;
     text-align: center;
-    width: 120px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.caixa-insta{
-    background-color: #f0efef;
+.tecnologias{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.Java, .css, .html, .Python, .JavaScript{
+    background-color: white;
     padding: 20px;
-    border-radius: 10px;
+    width: 150px;
     text-align: center;
-    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 footer{
@@ -128,6 +157,11 @@ footer{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.Java:hover, .css:hover, .html:hover, .Python:hover, .JavaScript:hover, .caixa-linkedin:hover, .caixa-github:hover{
+    background-color: #ebebeb;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
 .caixa-insta:hover, .caixa-wpp:hover{
@@ -145,5 +179,5 @@ footer{
 }
 
 .img-home:hover{
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
