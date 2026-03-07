@@ -48,6 +48,64 @@ header{
     
 }
 
+#sobre{
+    color: #353535;
+    justify-content: space-between;
+    background-color: #fcfcfc;
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 150px;
+}
+
+#servicos{
+    color: #353535;
+    justify-content: space-between;
+    background-color: #f0efef;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 150px;
+}
+
+#contato{
+    color: #353535;
+    justify-content: space-between;
+    background-color: #fcfcfc;
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 150px;
+}
+
+.redes{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.redes a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: black;
+}
+
+.redes img{
+    margin-bottom: 8px;
+}
+
+footer{
+    background-color: #f0efef;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .btn:hover{
     background-color: #353535;
 }
@@ -55,3 +113,4 @@ header{
 .Links a:hover{
     color: #353535;
 }
+
