@@ -13,6 +13,11 @@ p {
 body{
     margin: 0px;
 }
+
+html{
+scroll-behavior: smooth;
+}
+
 header{
     color: #8d8989;
     padding: 10px;
