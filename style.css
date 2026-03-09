@@ -46,7 +46,6 @@ header{
 #home{
     font-size: 20px;
     color: #353535;
-    justify-content: space-between;
     background-color: #f0efef;
     padding-top: 5px;
     display: flex;
@@ -149,7 +148,7 @@ header{
     margin-bottom: 8px;
 }
 
-.caixa-wpp, .caixa-insta, .caixa-linkedin, .caixa-github {
+.caixa-insta, .caixa-linkedin, .caixa-github {
     background-color: white;
     padding: 20px;
     width: 150px;
