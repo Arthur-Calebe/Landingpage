@@ -15,7 +15,7 @@ body{
 }
 
 html{
-scroll-behavior: smooth;
+scroll-behavior: smooth; /*faz com que sempre q você clique no link do nav a tela te leve de forma suave para a area*/
 }
 
 header{
@@ -25,8 +25,12 @@ header{
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    justify-content: space-between; /*Para deixar lado a lado*/
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);/*Sombra*/
+
+    position: sticky; /* faz o header ficar "grudado" no topo*/
+    top: 0; /*definir que ele fique colado no topo*/
+    z-index: 1000;/*Garantir que ele fique por cima das outras coisas*/
 }
 
 .Links ul{
@@ -174,6 +178,7 @@ header{
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #projetos{
@@ -190,6 +195,7 @@ header{
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 footer{
@@ -202,11 +208,13 @@ footer{
 .atendimento:hover, .gerenciamento:hover, .portifolio:hover{
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
 }
 
 .Java:hover, .css:hover, .html:hover, .Python:hover, .JavaScript:hover, .caixa-linkedin:hover, .caixa-github:hover{
     background-color: #ebebeb;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
 }
 
 .caixa-insta:hover, .caixa-wpp:hover{
