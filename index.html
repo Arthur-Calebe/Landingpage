@@ -10,7 +10,10 @@
     
     <header>
         <h1>Arthur Calebe DEV</h1>
-        <nav class="Links">
+
+        <button class="menu-hamburguer" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+
+        <nav class="Links" id="menuNav">
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -90,6 +93,16 @@
                 target="_blank">Repositório GitHub</a>
             </div>
 
+            <div class="sistemaDeVendas">
+                <h3>Projeto 5: Sistema de controle de vendas</h3>
+                <img src="img/Loja02.PNG" alt="Projeto 4" width="300" height="150">
+                <br>
+                <p>Sistema de controle de vendas para lojas, fiz esse projeto para colococar em pratica os meus estudos de POO em Java, um projeto voltada para solucionar problemas reais.</p>
+                <br>
+                <br>
+                <a href="https://github.com/Arthur-Calebe/SistemaControleVendas" class="btn" target="_blank">Repositório GitHub</a>
+            </div>
+            
             <div class="portifolio">
                 <h3>Projeto 3: Portfólio Pessoal</h3>
                 <img src="img/imgProjetos/Portifolioimg.PNG" alt="Projeto 3" width="300" height="150">
@@ -112,6 +125,8 @@
                 <a href="https://github.com/Arthur-Calebe/TelaDeLogin" class="btn" target="_blank">Repositório GitHub</a>
             </div>
         </div>
+
+        
     </section>
 
     <section id="contato">
@@ -142,5 +157,22 @@
     <footer>
     <p>&copy; 2026 Arthur Calebe DEV. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuNav = document.getElementById('menuNav');
+
+        menuToggle.addEventListener('click', () => {
+            menuNav.classList.toggle('open');
+        });
+
+        /* Fecha o menu ao clicar em qualquer link */
+        menuNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuNav.classList.remove('open');
+            });
+        });
+    </script>
+
 </body>
 </html>

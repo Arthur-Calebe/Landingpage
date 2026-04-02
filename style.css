@@ -15,12 +15,12 @@ body{
 }
 
 html{
-scroll-behavior: smooth; /*faz com que sempre q você clique no link do nav a tela te leve de forma suave para a area*/
+    scroll-behavior: smooth; /*faz com que sempre q você clique no link do nav a tela te leve de forma suave para a area*/
 }
 
 header{
     color: #8d8989;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: rgb(250, 250, 250);
 
     display: flex;
@@ -33,11 +33,29 @@ header{
     z-index: 1000;/*Garantir que ele fique por cima das outras coisas*/
 }
 
+/* MENU HAMBURGUER — só aparece no mobile */
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #8d8989;
+    line-height: 1;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+
+.menu-hamburguer:hover {
+    color: #353535;
+}
+
 .Links ul{
     list-style: none;
     display: flex;
     gap: 20px;
-    
+    margin: 0;
+    padding: 0;
 }
 
 .Links a{
@@ -141,6 +159,7 @@ header{
     display: flex;
     gap: 60px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .redes a {
@@ -189,9 +208,10 @@ header{
     justify-content: center;
     gap: 40px;
     margin-top: 40px;
+    flex-wrap: wrap; /* já ajuda em telas médias */
 }
 
-.gerenciamento, .portifolio, .atendimento, .páginaLogin{
+.gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas{
     width: 350px;
     background: #f0efef;
     padding: 20px;
@@ -208,7 +228,7 @@ footer{
     padding-bottom: 10px;
 }
 
-.atendimento:hover, .gerenciamento:hover, .portifolio:hover, .páginaLogin:hover{
+.atendimento:hover, .gerenciamento:hover, .portifolio:hover, .páginaLogin:hover, .sistemaDeVendas:hover{
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     transform: translateY(-10px);
@@ -238,41 +258,193 @@ footer{
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
-/* RESPONSIVIDADE */
+/* ================================
+   RESPONSIVIDADE — TABLET (≤ 1024px)
+   ================================ */
+@media (max-width: 1024px) {
+
+    #home {
+        gap: 50px;
+        padding: 40px 40px;
+    }
+
+    #sobre,
+    #servicos,
+    #contato {
+        padding: 80px 40px;
+    }
+
+    .gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas {
+        width: 300px;
+    }
+
+    .gerenciamento img, .portifolio img, .atendimento img, .páginaLogin img, .sistemaDeVendas img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ================================
+   RESPONSIVIDADE — MOBILE (≤ 768px)
+   ================================ */
 @media (max-width: 768px) {
 
-    #home{
+    /* Header: hamburguer ativo */
+    header {
+        flex-wrap: wrap;
+        padding: 14px 20px;
+        gap: 0;
+    }
+
+    header h1 {
+        font-size: 18px;
+        flex: 1;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    /* Nav fechado por padrão no mobile */
+    .Links {
+        display: none;
+        width: 100%;
+        order: 3;
+        background-color: rgb(250, 250, 250);
+        border-top: 1px solid #e5e5e5;
+        padding: 10px 0;
+    }
+
+    /* Nav aberto via JS */
+    .Links.open {
+        display: block;
+    }
+
+    .Links ul {
         flex-direction: column;
-        gap: 40px;
-        text-align: center;
-        padding: 40px 20px;
+        gap: 0;
         align-items: center;
     }
 
-    .img-home{
+    .Links ul li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .Links ul li:last-child {
+        border-bottom: none;
+    }
+
+    .Links a {
+        font-size: 17px;
+    }
+
+    /* Seção home */
+    #home {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+        padding: 40px 20px;
+        align-items: center;
+        min-height: auto;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .img-home {
         display: flex;
         justify-content: center;
     }
 
     .img-home img {
         width: 100%;
-        max-width: 350px;
+        max-width: 340px;
         height: auto;
     }
 
-    #projetos{
+    /* Seções internas */
+    #sobre,
+    #servicos,
+    #contato {
+        padding: 60px 20px;
+        min-height: auto;
+        margin-top: 0;
+    }
+
+    #sobre p,
+    #servicos p,
+    #contato p {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+    /* Projetos */
+    #projetos {
         flex-direction: column;
         align-items: center;
+        gap: 24px;
     }
 
-    .redes{
+    .gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .gerenciamento img, .portifolio img, .atendimento img, .páginaLogin img, .sistemaDeVendas img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Redes sociais */
+    .redes {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    header{
-        flex-direction: column;
-        gap: 10px;
+    .caixa-insta, .caixa-linkedin, .caixa-github {
+        margin-top: 20px;
+        width: 180px;
     }
 
+    /* Tecnologias */
+    .tecnologias {
+        gap: 20px;
+    }
+
+    .Java, .css, .html, .Python, .JavaScript {
+        width: 120px;
+        padding: 15px;
+    }
+}
+
+/* ================================
+   RESPONSIVIDADE — MOBILE PEQUENO (≤ 400px)
+   ================================ */
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 15px;
+    }
+
+    #home h2 {
+        font-size: 20px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+
+    .Java, .css, .html, .Python, .JavaScript {
+        width: 100px;
+        padding: 12px;
+    }
+
+    .gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas {
+        max-width: 100%;
+    }
 }
