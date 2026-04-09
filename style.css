@@ -211,7 +211,7 @@ header{
     flex-wrap: wrap; /* já ajuda em telas médias */
 }
 
-.gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas{
+.gerenciamento, .cafeAroma, .atendimento, .páginaLogin, .sistemaDeVendas{
     width: 350px;
     background: #f0efef;
     padding: 20px;
@@ -228,7 +228,7 @@ footer{
     padding-bottom: 10px;
 }
 
-.atendimento:hover, .gerenciamento:hover, .portifolio:hover, .páginaLogin:hover, .sistemaDeVendas:hover{
+.atendimento:hover, .gerenciamento:hover, .cafeAroma:hover, .páginaLogin:hover, .sistemaDeVendas:hover{
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     transform: translateY(-10px);
@@ -274,11 +274,11 @@ footer{
         padding: 80px 40px;
     }
 
-    .gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas {
+    .gerenciamento, .cafeAroma, .atendimento, .páginaLogin, .sistemaDeVendas {
         width: 300px;
     }
 
-    .gerenciamento img, .portifolio img, .atendimento img, .páginaLogin img, .sistemaDeVendas img {
+    .gerenciamento img, .cafeAroma img, .atendimento img, .páginaLogin img, .sistemaDeVendas img {
         width: 100%;
         height: auto;
     }
@@ -389,12 +389,12 @@ footer{
         gap: 24px;
     }
 
-    .gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas {
+    .gerenciamento, .cafeAroma, .atendimento, .páginaLogin, .sistemaDeVendas {
         width: 100%;
         max-width: 400px;
     }
 
-    .gerenciamento img, .portifolio img, .atendimento img, .páginaLogin img, .sistemaDeVendas img {
+    .gerenciamento img, .cafeAroma img, .atendimento img, .páginaLogin img, .sistemaDeVendas img {
         width: 100%;
         height: auto;
     }
@@ -444,7 +444,7 @@ footer{
         padding: 12px;
     }
 
-    .gerenciamento, .portifolio, .atendimento, .páginaLogin, .sistemaDeVendas {
+    .gerenciamento, .cafeAroma, .atendimento, .páginaLogin, .sistemaDeVendas {
         max-width: 100%;
     }
 }
